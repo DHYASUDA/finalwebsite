@@ -1,6 +1,4 @@
-/* =========================
-   BASE / RESET
-========================= */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { font-size: 16px; }
@@ -27,9 +25,7 @@ hr {
   margin-bottom: 2.5rem;
 }
 
-/* =========================
-   HEADER (shared)
-========================= */
+
 header {
   display: flex;
   align-items: center;
@@ -89,19 +85,14 @@ footer { margin-top: 3.125rem; padding-bottom: 2rem; }
   padding-right: 0.5rem;
 }
 
-/* =========================
-   CONTAINER (shared base)
-========================= */
+
 .container {
   max-width: 60%;
   margin: 1.25rem auto;
   padding-top: 2rem;
 }
 
-/* =========================
-   HOME PAGE (scoped)
-   ✅ PIC LEFT, TEXT RIGHT
-========================= */
+
 .homePage .container {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -129,7 +120,7 @@ footer { margin-top: 3.125rem; padding-bottom: 2rem; }
   border: 0.125rem solid #333;
 }
 
-/* RIGHT column (text + circles) */
+
 .homePage .greeting {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
@@ -264,6 +255,10 @@ footer { margin-top: 3.125rem; padding-bottom: 2rem; }
   padding-top: 1rem;
 }
 
+/* Keep all work experience / education blocks in the right column */
+.resumePage .twoCol > .block { grid-column: 2; }
+.resumePage .twoCol > div:not(.block) { grid-column: 1; }
+
 .resumePage .block p { line-height: 1.6; }
 .resumePage .date { font-weight: 600; }
 .resumePage .title { font-weight: 600; }
@@ -289,8 +284,8 @@ footer { margin-top: 3.125rem; padding-bottom: 2rem; }
 .contactPage .pic {
   grid-column: 2 / 3;
   grid-row: 1 / 4;
-  min-height: 18rem;
-  background-color: red; /* replace later */
+  min-height: 18rem; 
+
   border-radius: 0.5rem;
 }
 
