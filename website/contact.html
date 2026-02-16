@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- shared site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Contact | David Yasuda</title>
+  </head>
+
+  <body class="contactPage">
+    <header>
+      <div class="nametitle">
+        <a href="index.html">
+          <div class="test"></div>
+        </a>
+
+        <div class="n">
+          <a href="index.html"><h1>David Yasuda</h1></a>
+        </div>
+
+        <div class="e"><h3>Engineer</h3></div>
+      </div>
+
+      <nav class="nav">
+        <a href="resume.html"><h2>Resume</h2></a>
+        <h1>|</h1>
+        <a href="projects.html"><h2>Projects</h2></a>
+        <h1>|</h1>
+        <a href="contact.html"><h2>Contact</h2></a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="contactinfo">
+        <h1 class="page-title">Contact</h1>
+        <p>Looking forward to hearing from you</p>
+        <p>Chicago, Illinois</p>
+      </div>
+
+      <div class="phoneinfo">
+        <h2>Phone</h2>
+        <p><a href="tel:+16304028656">630.402.8656</a></p>
+      </div>
+
+      <div class="emailinfo">
+        <h2>Email</h2>
+        <p><a href="mailto:dhyasuda0@gmail.com">dhyasuda0@gmail.com</a></p>
+      </div>
+
+      <!-- optional right column block (you had .pic) -->
+      <div class="pic"></div>
+    </main>
+
+    <footer>
+      <hr />
+      <div class="footcontainer">
+        <div>
+          <div class="phone"><h2>Phone</h2></div>
+          <div class="phone1">
+            <h2 class="footerValue"><a href="tel:+16304028656">630.402.8656</a></h2>
+          </div>
+        </div>
+
+        <div>
+          <div class="email"><h2>Email</h2></div>
+          <div class="email1">
+            <h2 class="footerValue"><a href="mailto:dhyasuda0@gmail.com">dhyasuda0@gmail.com</a></h2>
+          </div>
+        </div>
+
+        <div>
+          <div class="follow"><h2>Follow Me</h2></div>
+          <div class="follow1">
+            <h2 class="footerValue">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              &nbsp;|&nbsp;
+              <a href="https://github.com/DHYASUDA" target="_blank" rel="noreferrer">GitHub</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="shit">
+          <h3 style="font-weight: normal">©2026 by David Yasuda</h3>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Page-specific CSS (scoped under .contactPage) -->
+    <style>
+      .contactPage .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        max-width: 60%;
+        margin: 1.25rem auto;
+        padding-bottom: 9.375rem;
+        gap: 1.25rem;
+      }
+
+      .contactPage .contactinfo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+      }
+
+      .contactPage .emailinfo {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+      }
+
+      .contactPage .phoneinfo {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+      }
+
+      .contactPage .pic {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+        min-height: 18rem;
+        background-color: red; /* replace later with image or form */
+        border-radius: 0.5rem;
+      }
+
+      /* If you later re-add your form styles, keep them scoped too */
+      .contactPage input {
+        max-width: 50%;
+        border: solid grey 0.5px;
+        border-radius: 2%;
+        height: 41px;
+        background-color: rgba(243, 243, 243, 1);
+      }
+
+      .contactPage #message {
+        background-color: rgb(245 245 245);
+      }
+
+      .contactPage .submitbutton {
+        border-radius: 1.5625rem;
+        background-color: #eea302;
+        height: 3.1875rem;
+      }
+
+      .contactPage .submitbutton:hover {
+        background-color: rgba(243, 243, 243, 1);
+      }
+
+      @media (max-width: 1100px) {
+        .contactPage .container {
+          max-width: 90%;
+          grid-template-columns: 1fr;
+        }
+
+        .contactPage .pic {
+          grid-column: 1 / 2;
+          grid-row: 4 / 5;
+        }
+      }
+    </style>
+  </body>
+</html>

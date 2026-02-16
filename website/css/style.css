@@ -1,0 +1,374 @@
+/* =========================
+   BASE / RESET
+========================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+  background-color: rgba(243, 243, 243, 1);
+  font-family: "Work Sans", sans-serif;
+  color: #111;
+}
+
+h1, h2, h3, p { font-family: "Work Sans", sans-serif; }
+
+a { color: black; text-decoration: none; }
+a:visited { color: black; }
+
+hr {
+  max-width: 97%;
+  margin: 0 auto;
+  border: 1px solid rgba(199, 199, 199, 1);
+}
+
+.page-title {
+  font-size: 48px;
+  margin-bottom: 2.5rem;
+}
+
+/* =========================
+   HEADER (shared)
+========================= */
+header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 0;
+}
+
+.nametitle {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  margin-left: 3.125rem;
+}
+
+.nametitle h3 { font-weight: normal; }
+
+.test {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #eea302;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5vw;
+  margin-left: auto;
+  margin-right: 3.125rem;
+  align-items: center;
+}
+
+.nav h2 { font-weight: normal; font-size: 1.2rem; }
+.nav h1 { font-weight: 300; font-size: 1.4rem; }
+
+/* =========================
+   FOOTER (shared)
+========================= */
+footer { margin-top: 3.125rem; padding-bottom: 2rem; }
+
+.footcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 97%;
+  margin: 0 auto;
+  height: 11.43rem;
+  margin-top: 3.125rem;
+}
+
+.phone, .phone1 { margin-left: 3.125rem; }
+
+.footerValue { font-weight: normal; font-size: 1.2rem; }
+
+.shit {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 0.5rem;
+}
+
+/* =========================
+   CONTAINER (shared base)
+========================= */
+.container {
+  max-width: 60%;
+  margin: 1.25rem auto;
+  padding-top: 2rem;
+}
+
+/* =========================
+   HOME PAGE (scoped)
+   ✅ PIC LEFT, TEXT RIGHT
+========================= */
+.homePage .container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: auto auto auto;
+  gap: 1.25rem 2rem;
+  padding-top: 5%;
+  align-items: start;
+}
+
+/* LEFT column (picture) */
+.homePage .pic {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 0;
+}
+
+.homePage .pic img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.125rem solid #333;
+}
+
+/* RIGHT column (text + circles) */
+.homePage .greeting {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  letter-spacing: 0.03em;
+}
+
+.homePage .hello { font-size: 2.5rem; }
+
+.homePage .aboutme {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.homePage .aboutme p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-top: 0.75rem;
+}
+
+.homePage .resumecontainer {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.homePage .resumecontainer h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+/* Home page circles */
+.homePage .resume,
+.homePage .projects,
+.homePage .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8.75rem;
+  width: 8.75rem;
+  border-radius: 50%;
+  border: 0.125rem solid black;
+  transition: background-color 0.2s ease;
+}
+
+.homePage .resume { background-color: #eea302; }
+.homePage .projects { background-color: #ff3b25; }
+.homePage .contact { background-color: #80d8da; }
+
+.homePage .resume:hover,
+.homePage .projects:hover,
+.homePage .contact:hover {
+  background-color: rgba(243, 243, 243, 1);
+}
+
+/* =========================
+   PROJECTS PAGE (scoped)
+========================= */
+.projectsPage .container { padding-top: 2rem; }
+
+.projectsPage .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem 0;
+}
+
+.projectsPage .project__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projectsPage .projecth2 { margin-bottom: 1.25rem; }
+
+.projectsPage .text1 {
+  max-width: 26.375rem;
+  line-height: 1.6;
+}
+
+.projectsPage .project__link {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* slider */
+.projectsPage .sliderWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  height: 31.25rem;
+  overflow: hidden;
+}
+
+.projectsPage .slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+
+.projectsPage .slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* hide scrollbar */
+.projectsPage .slider::-webkit-scrollbar { height: 0; }
+.projectsPage .slider { scrollbar-width: none; }
+
+/* =========================
+   RESUME PAGE (scoped)
+========================= */
+.resumePage .resumeSection { padding: 1.5rem 0; }
+.resumePage .sectionDivider { margin: 1.5rem auto; }
+
+.resumePage .twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+  padding-top: 1rem;
+}
+
+.resumePage .block p { line-height: 1.6; }
+.resumePage .date { font-weight: 600; }
+.resumePage .title { font-weight: 600; }
+
+/* =========================
+   CONTACT PAGE (scoped)
+========================= */
+.contactPage .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  max-width: 60%;
+  margin: 1.25rem auto;
+  padding-top: 2rem;
+  padding-bottom: 9.375rem;
+  gap: 1.25rem;
+}
+
+.contactPage .contactinfo { grid-column: 1 / 2; grid-row: 1 / 2; }
+.contactPage .emailinfo { grid-column: 1 / 2; grid-row: 2 / 3; }
+.contactPage .phoneinfo { grid-column: 1 / 2; grid-row: 3 / 4; }
+
+.contactPage .pic {
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
+  min-height: 18rem;
+  background-color: red; /* replace later */
+  border-radius: 0.5rem;
+}
+
+/* Optional: if you later add a form */
+.contactPage input {
+  max-width: 50%;
+  border: solid grey 0.5px;
+  border-radius: 2%;
+  height: 41px;
+  background-color: rgba(243, 243, 243, 1);
+}
+
+.contactPage #message { background-color: rgb(245 245 245); }
+
+.contactPage .submitbutton {
+  border-radius: 1.5625rem;
+  background-color: #eea302;
+  height: 3.1875rem;
+}
+
+.contactPage .submitbutton:hover {
+  background-color: rgba(243, 243, 243, 1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+  .container { max-width: 90%; }
+  .nav { margin-right: 1rem; }
+  .nametitle { margin-left: 1rem; }
+
+  /* home stacks */
+  .homePage .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    padding-top: 2rem;
+  }
+
+  .homePage .pic {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-content: center;
+  }
+
+  .homePage .greeting {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .homePage .aboutme {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .homePage .resumecontainer {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* projects stacks */
+  .projectsPage .project { grid-template-columns: 1fr; }
+
+  /* resume stacks */
+  .resumePage .twoCol { grid-template-columns: 1fr; }
+
+  /* contact stacks */
+  .contactPage .container { grid-template-columns: 1fr; }
+  .contactPage .pic { grid-column: 1 / 2; grid-row: 4 / 5; }
+
+  /* footer stacks */
+  .footcontainer {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
+
+  .phone, .phone1 { margin-left: 0; }
+}
