@@ -21,7 +21,7 @@
       <div class="nametitle">
         <a href="index.html"><div class="test"></div></a>
         <div class="n"><a href="index.html"><h1>David Yasuda</h1></a></div>
-        <div class="e"><h3>Engineer</h3></div>
+        <div class="e"><h3>FullStack Developer</h3></div>
       </div>
 
       <nav class="nav">
@@ -36,6 +36,59 @@
     <main class="container">
       <h1 class="page-title">Projects</h1>
 
+
+      <section class="project">
+        <div class="project__info">
+          <div class="project__top">
+            <h2 class="projecth2">Full-stack E-Commerce Markplace</h2>
+            <a class="project__link" href="https://github.com/DHYASUDA/davideshop" target="_blank" rel="noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+          <p class="text1">
+            A full-stack e-commerce platform built from scratch with a React SPA and a Spring Boot REST API, featuring user authentication, product management, category-based browsing, and role-based product ownership with edit/delete workflows.
+          </p>
+        </div>
+
+        <div class="project__media">
+          <div class="sliderWrapper">
+            <div class="slider">
+              <img src="assets/images/eshop4.png" alt="eshop screenshot 1" />
+              <img src="assets/images/eshop2.png" alt="PIOS screenshot 2" />
+              <img src="assets/images/eshop3.png" alt="PIOS screenshot 2" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="project__info">
+          <div class="project__top">
+            <h2 class="projecth2">TEAMMATES Peer Evaluation System</h2>
+            <a class="project__link" href="https://github.com/DHYASUDA/teammates" target="_blank" rel="noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+          <p class="text1">
+            Open-source peer evaluation platform used by hundreds of universities worldwide (Angular, Java, Google Cloud, Apache Solr).
+Extended student search so instructors can filter by registration status (registered vs unregistered), touching 7 files and ~150 net lines across Java backend (StudentSearchManager, StudentSearchDocument), Solr indexing, and integration tests.
+Improved instructor/student help and features UI and filter behavior across 8+ components (~500 lines added, ~350 refactored), including HTML/SCSS/TypeScript and corresponding test coverage.
+Contributed to a 2,000+ file codebase (799+ TypeScript, 1,200+ Java) with established CI (GitHub Actions), static analysis (Checkstyle, PMD, SpotBugs), and E2E tests.
+          </p>
+        </div>
+
+        <div class="project__media">
+          <div class="sliderWrapper">
+            <div class="slider">
+              <img src="assets/images/teammates1.png" alt="teammates screenshot 1" />
+              <img src="assets/images/teammtes5.png" alt="teammates screenshot 2" />
+              <img src="assets/images/teammtes4.png" alt="teammates screenshot 4" />
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="project">
         <div class="project__info">
           <div class="project__top">
@@ -46,9 +99,7 @@
           </div>
 
           <p class="text1">
-            A web application developed using Java Spring Boot that scrapes and
-            displays real-time Air Quality Index (AQI) data from various online
-            sources...
+            A Spring Boot web application that collects near real-time AQI readings by scraping and normalizing data from multiple online providers, then serving it through RESTful APIs for a dynamic front-end display. Includes multi-city comparison, allowing users to benchmark air quality across regions and monitor changes over time using AQICN and U.S Environmental Protection Agency (EPA) APIs.
           </p>
         </div>
 
@@ -63,29 +114,7 @@
         </div>
       </section>
 
-      <section class="project">
-        <div class="project__info">
-          <div class="project__top">
-            <h2 class="projecth2">Mini-operating system built inside a Raspberry Pi 5</h2>
-            <a class="project__link" href="https://github.com/DHYASUDA/piosRepo" target="_blank" rel="noreferrer">
-              GitHub →
-            </a>
-          </div>
-
-          <p class="text1">
-            A series of bare-metal programming experiments on the Raspberry Pi 5...
-          </p>
-        </div>
-
-        <div class="project__media">
-          <div class="sliderWrapper">
-            <div class="slider">
-              <img src="assets/images/pi1.png" alt="PIOS screenshot 1" />
-              <img src="assets/images/pi2.png" alt="PIOS screenshot 2" />
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <section class="project">
         <div class="project__info">
@@ -97,7 +126,7 @@
           </div>
 
           <p class="text1">
-            A full-stack Spring Boot application that integrates with Data.gov and BLS's APIs...
+            A Spring Boot + Chart.js analytics app that consumes Data.gov and BLS APIs, aggregates multiple time-series (annual + quarterly), and exposes them via a REST layer for front-end visualization. Built to support multi-metric comparisons over time (e.g., earnings trends vs labor participation vs time-use), with real-time refresh, input validation, and graceful handling of incomplete data.
           </p>
         </div>
 
@@ -115,13 +144,15 @@
         <div class="project__info">
           <div class="project__top">
             <h2 class="projecth2">Responsive web apps (HTML/CSS/JS)</h2>
-            <a class="project__link" href="https://github.com/DHYASUDA/website" target="_blank" rel="noreferrer">
-              GitHub →
-            </a>
+            <div class="project__links">
+              <a class="project__link" href="https://takaseauto.wixsite.com/takase-auto-repair" target="_blank" rel="noreferrer">Website →</a>
+              <span class="project__link-sep">|</span>
+              <a class="project__link" href="https://github.com/DHYASUDA/finalwebsite" target="_blank" rel="noreferrer">GitHub →</a>
+            </div>
           </div>
 
           <p class="text1">
-            Developed two responsive web applications using HTML, CSS, and JavaScript...
+            Built and deployed two responsive web applications using HTML, CSS, and JavaScript, including a production website for <strong><a href="https://takaseauto.wixsite.com/takase-auto-repair" target="_blank" rel="noreferrer">Takase Auto Shop</a></strong> and a personal CV/portfolio site. The auto shop site has reached 5,000+ unique visitors and achieved a ~75% year-over-year increase in unique visitors through ongoing UX/content iterations and customer-driven updates (e.g., coupons, promotions, and UI refinements).
           </p>
         </div>
 
@@ -130,6 +161,30 @@
             <div class="slider">
               <img src="assets/images/takase.png" alt="Takase website" />
               <img src="assets/images/david.png" alt="Old portfolio" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="project__info">
+          <div class="project__top">
+            <h2 class="projecth2">Mini-operating system built inside a Raspberry Pi 5</h2>
+            <a class="project__link" href="https://github.com/DHYASUDA/project310" target="_blank" rel="noreferrer">
+              GitHub →
+            </a>
+          </div>
+
+          <p class="text1">
+            Bare-metal ARM64 kernel for Raspberry Pi that drives the display via the GPU mailbox and implements a simple 2D graphics API (pixels, lines, rectangles) with no Operating System.
+          </p>
+        </div>
+
+        <div class="project__media">
+          <div class="sliderWrapper">
+            <div class="slider">
+              <img src="assets/images/pi1.png" alt="PIOS screenshot 1" />
+              <img src="assets/images/pi2.png" alt="PIOS screenshot 2" />
             </div>
           </div>
         </div>
@@ -151,7 +206,7 @@
           <div class="follow"><h2>Follow Me</h2></div>
           <div class="follow1">
             <h2 class="footerValue">
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/david-yasuda-329a82366/" target="_blank" rel="noreferrer">LinkedIn</a>
               &nbsp;|&nbsp;
               <a href="https://github.com/DHYASUDA" target="_blank" rel="noreferrer">GitHub</a>
             </h2>
